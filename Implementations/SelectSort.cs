@@ -1,6 +1,7 @@
 ﻿namespace Implementations
 {
     using System.Collections.Generic;
+    using Implementation;
 
     public static class SelectSort
     {
@@ -17,9 +18,7 @@
                     }
                 }
 
-                var min = input[imin];
-                input[imin] = input[i];
-                input[i] = min;
+                input.Swap(i, imin);
             }
             return input;
         }
